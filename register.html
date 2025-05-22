@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BRHELPDESK Crypto Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      padding: 20px;
+    }
+    form {
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: auto;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+    button {
+      margin-top: 20px;
+      background-color: #00c896;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h2 align="center">BRHELPDESK Crypto Registration</h2>
+
+<form name="submit-to-google-sheet">
+  <label>Full Name</label>
+  <input type="text" name="name" required>
+
+  <label>Mobile Number</label>
+  <input type="text" name="mobile" required>
+
+  <label>Referral Code</label>
+  <input type="text" name="referral" required>
+
+  <label>Your Trust Wallet (USDT Address)</label>
+  <input type="text" name="wallet" required>
+
+  <label>Your Location (District/State)</label>
+  <input type="text" name="location" required>
+
+  <button type="submit">Register Now</button>
+  <span id="msg" style="color:limegreen;display:block;margin-top:10px;"></span>
+</form>
+
+<script>
+  const scriptURL = 'YOUR_GOOGLE_SCRIPT_URL_HERE';
+  const form = document.forms['submit-to-google-sheet'];
+  const msg = document.getElementById("msg");
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Registration successful!";
+        form.reset();
+      })
+      .catch(error => {
+        msg.innerHTML = "Error! Try again.";
+      });
+  });
+</script>
+
+</body>
+</html>
