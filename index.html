@@ -52,4 +52,31 @@
     .catch(error => message.innerText = "Error!");
   });
 </script>
+<form id="referralForm">
+  <input type="text" name="name" placeholder="Name" required><br>
+  <input type="text" name="mobile" placeholder="Mobile" required><br>
+  <input type="text" name="referral" placeholder="Referral Code"><br>
+  <input type="text" name="wallet" placeholder="Wallet Address" required><br>
+  <input type="text" name="location" placeholder="Location"><br>
+  <button type="submit">Submit</button>
+</form>
+
+<p id="message"></p>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxznhtGeVpWdz32n4HmAIXHdtwB25uPToNidX_gs_BDDGlqDywJCvTmgd4tkWZJjFaJ/exec';
+  const form = document.getElementById('referralForm');
+  const message = document.getElementById('message');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    fetch(scriptURL, {
+      method: 'POST',
+      body: new FormData(form)
+    })
+    .then(response => message.innerText = "Successfully submitted!")
+    .catch(error => message.innerText = "Error!");
+  });
+</script>
+
 
