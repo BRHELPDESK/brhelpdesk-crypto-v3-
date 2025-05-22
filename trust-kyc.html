@@ -1,1 +1,72 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trust Wallet KYC</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background: #111;
+      color: #fff;
+    }
+    input, button {
+      padding: 10px;
+      width: 100%;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+    button {
+      background: #28a745;
+      color: #fff;
+      border: none;
+    }
+    .message {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>BRHELPDESK - Trust Wallet KYC</h1>
+  <form id="kycForm">
+    <label>Enter Your Name</label>
+    <input type="text" id="name" required />
+    
+    <label>Enter Your Referral Code</label>
+    <input type="text" id="referral" required />
+    
+    <label>Enter Your Trust Wallet Address (USDT TRC20)</label>
+    <input type="text" id="wallet" required />
+
+    <button type="submit">Submit KYC</button>
+  </form>
+
+  <div class="message" id="messageBox"></div>
+
+  <script>
+    const form = document.getElementById('kycForm');
+    const messageBox = document.getElementById('messageBox');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const referral = document.getElementById('referral').value;
+      const wallet = document.getElementById('wallet').value;
+
+      // For now, just show the entered data (later connect to Google Sheet or DB)
+      messageBox.innerHTML = `
+        <strong>Submitted!</strong><br/>
+        Name: ${name}<br/>
+        Referral Code: ${referral}<br/>
+        Wallet: ${wallet}<br/>
+        <br/>This data can now be stored securely.
+      `;
+
+      form.reset();
+    });
+  </script>
+</body>
+</html>
+
