@@ -2,87 +2,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8" />
-    <title>BR Helpdesk Crypto Referral Form</title>
-    <style>
-      body {
-        font-family: sans-serif;
-        background-color: #000;
-        color: #fff;
-        text-align: center;
-        padding: 20px;
-      }
-      input, select, textarea {
-        padding: 10px;
-        width: 90%;
-        margin: 10px auto;
-        display: block;
-        border-radius: 8px;
-        border: none;
-        font-size: 16px;
-      }
-      button {
-        background: #00ffcc;
-        color: #000;
-        border: none;
-        padding: 12px 30px;
-        font-size: 18px;
-        border-radius: 8px;
-        cursor: pointer;
-      }
-      .container {
-        max-width: 500px;
-        margin: auto;
-        background: #111;
-        padding: 20px;
-        border-radius: 12px;
-        box-shadow: 0 0 10px #0f0;
-      }
-    </style>
+    <title>BR Helpdesk Crypto Registration</title>
   </head>
   <body>
-    <div class="container">
-      <h2>BRHELPDESK Crypto Referral Registration</h2>
-      <form id="referralForm">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="tel" name="mobile" placeholder="Mobile Number" required />
-        <input type="text" name="referral" placeholder="Referral Code" required />
-        <input type="text" name="wallet" placeholder="Your Wallet Address (TRC20/USDT)" required />
-        <input type="text" name="location" placeholder="Your Location" required />
-        <button type="submit">Submit</button>
-      </form>
-      <p id="status"></p>
-    </div>
+    <h2>BR Helpdesk - Crypto Registration</h2>
+    <form action="https://script.google.com/macros/s/AKfycbxznhtGeVpWdz32n4HmAIXHdtwB25uPToNidX_gs_BDDGlqDywJCvTmgd4tkWZJjFaJ/exec" method="post">
+      <label>Name:</label><br>
+      <input type="text" name="name" required><br><br>
 
-    <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbxznhtGeVpWdz32n4HmAIXHdtwB25uPToNidX_gs_BDDGlqDywJCvTmgd4tkWZJjFaJ/exec';
+      <label>Mobile:</label><br>
+      <input type="text" name="mobile" required><br><br>
 
-      const form = document.getElementById('referralForm');
-      const status = document.getElementById('status');
+      <label>Referral Code:</label><br>
+      <input type="text" name="referral" required><br><br>
 
-      form.addEventListener('submit', e => {
-        e.preventDefault();
-        const data = new FormData(form);
-        const values = Object.fromEntries(data.entries());
+      <label>Trust Wallet Address:</label><br>
+      <input type="text" name="wallet" required><br><br>
 
-        fetch(scriptURL, {
-          method: 'POST',
-          body: JSON.stringify(values),
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        })
-        .then(res => res.json())
-        .then(response => {
-          status.textContent = 'Submitted successfully!';
-          form.reset();
-        })
-        .catch(error => {
-          status.textContent = 'Error! Try again.';
-        });
-      });
-    </script>
+      <label>Location:</label><br>
+      <input type="text" name="location" required><br><br>
+
+      <input type="submit" value="Submit">
+    </form>
   </body>
-</html>https://script.google.com/macros/s/AKfycbxznhtGeVpWdz32n4HmAIXHdtwB25uPToNidX_gs_BDDGlqDywJCvTmgd4tkWZJjFaJ/exec
-
-
+</html>
