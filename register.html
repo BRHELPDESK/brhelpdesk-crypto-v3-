@@ -63,6 +63,18 @@
 </form>
 
 <script>
+  const scriptURL = 'https://script.google.com/macros/s/YOUR-SCRIPT-ID/exec'; // നിങ്ങളുടെ Google Script URL
+  const form = document.forms['submit-to-google-sheet'];
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => alert("Form submitted successfully!"))
+      .catch(error => console.error('Error!', error.message));
+  });
+</script>
+
+<script>
   const scriptURL = 'YOUR_GOOGLE_SCRIPT_URL_HERE';
   const form = document.forms['submit-to-google-sheet'];
   const msg = document.getElementById("msg");
