@@ -1,1 +1,53 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BR Helpdesk Registration</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    form {
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: auto;
+    }
+    input, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+    }
+    input {
+      background: #fff;
+      color: #000;
+    }
+    button {
+      background: #0f0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 align="center">BR Helpdesk Registration</h2>
+
+  <form method="POST" action="YOUR_GOOGLE_SCRIPT_URL">
+    <input type="text" name="name" placeholder="പേര്" required>
+    <input type="text" name="phone" placeholder="മൊബൈൽ നമ്പർ" required>
+    <input type="text" name="wallet" placeholder="വാലറ്റ് അഡ്രസ്" required>
+    <input type="text" name="referral" placeholder="റഫറൽ കോഡ്" required>
+    <button type="submit">Register</button>
+  </form>
+
+</body>
+</html>
+
