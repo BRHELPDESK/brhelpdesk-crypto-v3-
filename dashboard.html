@@ -1,13 +1,58 @@
 
-<form onsubmit="redirectToDashboard(); return false;">
-  <!-- existing fields -->
-  <input type="submit" value="Submit">
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BR Helpdesk Dashboard</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      color: white;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding: 30px;
+    }
+    .container {
+      background-color: #000000aa;
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    .button {
+      display: block;
+      margin: 15px auto;
+      background-color: #ffc107;
+      color: #000;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .button:hover {
+      background-color: #e0a800;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to BR Helpdesk, Haneef!</h1>
+    <p>Your digital income journey begins here.</p>
+    
+    <a href="https://example.com/referralhub" class="button">Referral Hub</a>
+    <a href="https://example.com/wallet" class="button">My Wallet</a>
+    <a href="https://example.com/matchingincome" class="button">Matching Income</a>
+    <a href="https://example.com/rankstatus" class="button">Rank Status</a>
+  </div>
+</body>
+</html>
 
-<script>
-  function redirectToDashboard() {
-    // Success message & redirect to dashboard
-    alert("Registration Successful!");
-    window.location.href = "dashboard.html";  // Dashboard page name
-  }
-</script>
