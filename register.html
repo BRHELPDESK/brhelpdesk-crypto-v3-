@@ -2,48 +2,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Register</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register - BRHELPDESK</title>
   <style>
     body {
-      background: #111;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
       color: white;
-      font-family: sans-serif;
-      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
     form {
-      background: #222;
+      background-color: rgba(0,0,0,0.7);
       padding: 20px;
       border-radius: 10px;
-      max-width: 400px;
-      margin: auto;
     }
-    input, button {
-      width: 100%;
+    input {
+      display: block;
+      margin-bottom: 15px;
       padding: 10px;
-      margin-top: 10px;
+      width: 100%;
       border: none;
       border-radius: 5px;
     }
     button {
-      background: #00ff00;
+      padding: 10px 20px;
+      background-color: #ffcc00;
+      border: none;
       color: black;
       font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
 
-  <h2 align="center">BR Helpdesk Register</h2>
-
-  <form method="POST" action="https://script.google.com/macros/s/AKfycbytSpeZMwySxlJTFWHVHQg1ZWBvNgGvLMcl65oXr9sogWeVZtNfFOim1-SUM3sVmU7GqQ/exec">
-    <input type="text" name="name" placeholder="Name" required>
-    <input type="text" name="phone" placeholder="Phone" required>
-    <input type="text" name="wallet" placeholder="Wallet Address" required>
-    <input type="text" name="referral" placeholder="Referral Code" required>
-    <button type="submit">Submit</button>
-  </form>
+<form action="https://script.google.com/macros/s/YOUR_GOOGLE_SCRIPT_ID/exec" method="POST">
+  <h2>Register Now</h2>
+  <input type="text" name="name" placeholder="Full Name" required>
+  <input type="email" name="email" placeholder="Email Address" required>
+  <input type="password" name="password" placeholder="Password" required>
+  <input type="text" name="captcha" placeholder="Enter Captcha: 7 + 3 = ?" required>
+  <button type="submit">Submit</button>
+</form>
 
 </body>
 </html>
