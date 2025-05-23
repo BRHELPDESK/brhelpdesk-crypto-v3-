@@ -1,2 +1,53 @@
 
 <li><a href="join.html">Join</a></li>
+!DOCTYPE html>
+<html>
+<head>
+  <title>BRHELPDESK Join Form</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #f0f8ff;
+      padding: 20px;
+    }
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background: #28a745;
+      color: #fff;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+    }
+    button:hover {
+      background: #218838;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="thanks.html" method="get">
+    <h2>BRHELPDESK Joining Form</h2>
+    <input type="text" name="fullname" placeholder="Full Name" required>
+    <input type="tel" name="mobile" placeholder="Mobile Number" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <button type="submit">Join Now</button>
+  </form>
+
+</body>
+</html>
