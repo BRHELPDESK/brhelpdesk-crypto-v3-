@@ -1,59 +1,83 @@
 
-<form action="https://script.google.com/macros/s/AKfycbytSpeZMwySxlJTFWHVHQg1ZWBvNgGvLMcl65oXr9sogWeVZtNfFOim1-SUM3sVmU7GqQ/exec" method="POST">
-
-<form action="https://formsubmit.co/haneefbayar3@gmail.com" method="POST">
-  <label>Name:</label><br>
-  <input type="text" name="name" required><br>
-  <label>Email:</label><br>
-  <input type="email" name="email" required><br>
-  <label>Phone:</label><br>
-  <input type="text" name="phone" required><br><br>
-  <button type="submit">Submit</button>
-</form>
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Registration Form</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BRHELPDESK Joining Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+      padding: 20px;
+    }
+    .form-container {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 25px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      margin-top: 20px;
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
-<body style="background:#444; color:white; font-family:sans-serif; padding:20px;">
+<body>
 
-  <h1>Registration Form</h1>
+<div class="form-container">
+  <h2>BRHELPDESK Joining Form</h2>
+  <form action="https://formsubmit.co/YOUR-EMAIL@gmail.com" method="POST">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="Full Name" required>
 
-  <form action="https://formsubmit.co/haneefbayar3@gmail.com" method="POST">
-    <label>Name:</label><br>
-    <input type="text" name="name" required><br><br>
+    <label for="mobile">Mobile Number</label>
+    <input type="tel" id="mobile" name="Mobile Number" required>
 
-    <label>Email:</label><br>
-    <input type="email" name="email" required><br><br>
+    <label for="place">Location</label>
+    <input type="text" id="place" name="Location" required>
 
-    <label>Phone:</label><br>
-    <input type="text" name="phone" required><br><br>
+    <label for="whatsapp">WhatsApp Number</label>
+    <input type="tel" id="whatsapp" name="WhatsApp Number">
 
-    <!-- Optional: Redirect after submit -->
-    <input type="hidden" name="_next" value="https://brhelpdesk.github.io/thankyou.html">
+    <label for="ref">Referral Code (if any)</label>
+    <input type="text" id="ref" name="Referral Code">
 
-    <!-- Optional: Disable Captcha -->
-    <input type="hidden" name="_captcha" value="false">
+    <label for="remarks">Remarks</label>
+    <textarea id="remarks" name="Remarks" rows="4"></textarea>
 
-    <button type="submit" style="padding:10px 20px;">Submit</button>
+    <button type="submit">Submit Form</button>
   </form>
+</div>
 
 </body>
 </html>
-
-
-<!-- Referral Form Start -->
-<form action="https://formsubmit.co/haneefbayar3@gmail.com" method="POST">
-  <h2>BRHELPDESK Referral Join Form</h2>
-  <input type="text" name="name" placeholder="പേര്" required>
-  <input type="tel" name="phone" placeholder="ഫോൺ നമ്പർ" required>
-  <input type="email" name="email" placeholder="Email വിലാസം" required>
-  <input type="text" name="refer_code" placeholder="Referral Code (ആണെങ്കിലത്)" required>
-  <textarea name="message" placeholder="സന്ദേശം എഴുതൂ (ആവശ്യമായാൽ)"></textarea>
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="https://brhelpdesk.in/thanks.html">
-  <button type="submit">Join ചെയ്യുക</button>
-</form>
-<!-- Referral Form End -->
 
