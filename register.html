@@ -2,14 +2,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BR Helpdesk Registration</title>
+  <title>Register</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
-      background: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+      font-family: sans-serif;
       padding: 20px;
     }
     form {
@@ -21,33 +21,28 @@
     }
     input, button {
       width: 100%;
-      padding: 12px;
-      margin: 10px 0;
+      padding: 10px;
+      margin-top: 10px;
       border: none;
       border-radius: 5px;
     }
-    input {
-      background: #fff;
-      color: #000;
-    }
     button {
-      background: #0f0;
+      background: #00ff00;
+      color: black;
       font-weight: bold;
     }
   </style>
 </head>
 <body>
 
-  <h2 align="center">BR Helpdesk Registration</h2>
+  <h2 align="center">BR Helpdesk Register</h2>
 
-  <form method="POST" action="YOUR_GOOGLE_SCRIPT_URL">
-<form method="POST" action="https://script.google.com/macros/s/AKfycbx.../exec">
-
-    <input type="text" name="name" placeholder="പേര്" required>
-    <input type="text" name="phone" placeholder="മൊബൈൽ നമ്പർ" required>
-    <input type="text" name="wallet" placeholder="വാലറ്റ് അഡ്രസ്" required>
-    <input type="text" name="referral" placeholder="റഫറൽ കോഡ്" required>
-    <button type="submit">Register</button>
+  <form method="POST" action="https://script.google.com/macros/s/AKfycbytSpeZMwySxlJTFWHVHQg1ZWBvNgGvLMcl65oXr9sogWeVZtNfFOim1-SUM3sVmU7GqQ/exec">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="text" name="phone" placeholder="Phone" required>
+    <input type="text" name="wallet" placeholder="Wallet Address" required>
+    <input type="text" name="referral" placeholder="Referral Code" required>
+    <button type="submit">Submit</button>
   </form>
 
 </body>
